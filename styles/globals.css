@@ -14,3 +14,58 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.customized-accordion {
+  width: 100%;
+  height: 400px;
+}
+
+.customized-card {
+  width: 100%;
+}
+
+.customized-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+
+}
+
+.customized-accordion-collapse {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;*/ 
+  width: 100%;
+}
+
+.customized-card-body {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: black;
+    background-color: grey;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+}
+
