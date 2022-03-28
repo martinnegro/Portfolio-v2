@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
+
+
+:root {
+  --nav-bar-width: min(12%,75px)
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  width: 100vw;
+  max-width: 100%;
 }
 
 * {
@@ -21,51 +26,22 @@ a {
   justify-content: center;
   align-items: center;
 } */
+main {
+  padding-left: var(--nav-bar-width);
+}
 
 section {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 50px;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-.customized-accordion {
-  width: 100%;
-  height: 400px;
+h1 {
+  font-family: 'Jost', sans-serif;
+  font-size: 6rem;
+  margin: 0;
 }
-
-.customized-card {
-  width: 100%;
-}
-
-.customized-card-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-
-}
-
-.customized-accordion-collapse {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;*/ 
-  width: 100%;
-}
-
-.customized-card-body {
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    color: black;
-    background-color: grey;
-    height: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 1.5rem;
-}
-

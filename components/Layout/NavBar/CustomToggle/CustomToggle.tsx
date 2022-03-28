@@ -9,12 +9,14 @@ interface CustomToggleProps {
 }
 
 const CustomToggle = ({ children, eventKey, setActiveKey }: CustomToggleProps) => {
-    const handleToggle = useAccordionButton(eventKey,() => setActiveKey(eventKey))
+    // Desactivado por que el eventKey lo maneja el scrolling
+    // const handleToggle = useAccordionButton(eventKey,() => setActiveKey(eventKey))
     return (
         <button
             type="button"
-            onClick={handleToggle}
+            // onClick={handleToggle}
             className={styles.button}
+            style={{width: '100%'}}
         >
                 {children}
         </button>
