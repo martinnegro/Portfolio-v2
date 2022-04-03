@@ -1,125 +1,15 @@
+/*
+    Las variables son para ./Title
+*/
+
 .sectionHome {
     overflow-x: hidden;
-    padding-left: 15%;
     align-items: flex-start;
-
-    background-color: black;
-
     color: white;
+    background-color: black;
+    padding-left: 15%;
+
+    --title-letter-duration: 200ms;
+    --w-duration: 1.5s;
 }
 
-
-@keyframes letter-title-animation {
-    0% {
-        color: transparent;
-        font-size: 1rem;
-        left: -10%;
-        bottom: 25%;
-    }
-    100% {
-        color: inherit;
-        font-size: 6rem;
-        left: 0%;
-        bottom: 0%;
-    }
-}
-
-.titleName {
-    --letter-appearence: 250ms
-}
-
-.titleName span {
-    color: transparent;
-    position: relative;   
-}
-.titleName span:nth-child(1) {
-    animation: letter-title-animation var(--letter-appearence) linear 0s forwards;
-}
-.titleName span:nth-child(2) {
-    
-    animation: letter-title-animation var(--letter-appearence) linear 150ms forwards;
-}
-.titleName span:nth-child(3) {
-    animation: letter-title-animation var(--letter-appearence) linear 300ms forwards;
-}
-.titleName span:nth-child(4) {
-    animation: letter-title-animation var(--letter-appearence) linear 450ms forwards;
-}
-.titleName span:nth-child(5) {
-    animation: letter-title-animation var(--letter-appearence) linear 600ms forwards;
-}
-.titleName span:nth-child(6) {
-    animation: letter-title-animation var(--letter-appearence) linear 750ms forwards;
-}
-
-@keyframes w-appearence {
-    0% {
-        color: transparent;
-        bottom: 6rem;
-        transform: rotateX(0);
-    }
-    100% {
-        color: inherit;
-        bottom: 0
-    }
-}
-
-.wLetter {
-    transform: rotatex(180deg) translateY(2px);
-    color: transparent;
-
-    animation: w-appearence 750ms ease 1s forwards;
-}
-
-.subtitle span {
-    --animation-duration: 1s;
-
-    position: relative;
-    display: inline-block;
-    color: transparent;
-}
-
-@keyframes writing {
-    0% {
-        color: transparent;
-        top: -40%
-    }
-    100% {
-        color: inherit;
-        top: 0%
-
-    }
-}
-.subtitle span:nth-child(2){
-    animation: writing var(--animation-duration) ease 1750ms forwards;
-}
-.subtitle span:nth-child(3){
-    animation: writing var(--animation-duration) ease 1800ms forwards;
-}
-.subtitle span:nth-child(5){
-    animation: writing var(--animation-duration) ease 1950ms forwards;
-}
-.subtitle span:nth-child(6){
-    animation: writing var(--animation-duration) ease 2000ms forwards;
-}
-.subtitle span:nth-child(7){
-    animation: writing var(--animation-duration) ease 2050ms forwards;
-}
-.subtitle span:nth-child(8){
-    animation: writing var(--animation-duration) ease 2100ms forwards;
-}
-.subtitle span:nth-child(9){
-    animation: writing var(--animation-duration) ease 2150ms forwards;
-}
-.subtitle span:nth-child(10){
-    animation: writing var(--animation-duration) ease 2200ms forwards;
-}
-.subtitle span:nth-child(11){
-    animation: writing var(--animation-duration) ease 2250ms forwards;
-}
-.subtitle span:nth-child(12){
-    animation: writing var(--animation-duration) ease 2300ms forwards;
-}
-.subtitle span:nth-child(13){
-    animation: writing var(--animation-duration) ease 2350ms forwards;
-}

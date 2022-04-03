@@ -20,18 +20,12 @@ const Index: NextPage = () => {
         <link rel="manifest" href="/site.webmanifest"/>
       </Head>
 
-      
-        <Layout >
-          <Home />
-          <Portfolio />
-          <Resume />
-          <Contact />
-        </Layout>
-      
-
-      {/* <footer className={styles.footer}>
-        
-      </footer> */}
+      <Layout >
+        <Home />
+        <Portfolio />
+        <Resume />
+        <Contact />
+      </Layout>
     </div>
   )
 }
