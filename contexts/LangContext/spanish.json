@@ -1,4 +1,22 @@
 {
     "LANG_ID": "en",
-    "LANG_BUTTON": "Change to English"
+    "LANG_BUTTON": "Change to English",
+    "PORTFOLIO_SITES": [
+        {
+            "SITE_NAME": "WeatherApp",
+            "SITE_DESCRIPTION": "Uno de mis primero proyectos como programador Full Stack. Construído con React. Uso de APIs OpenWeatherMap y OpenStreetMap.",
+            "SITE_IMAGE": "https://i.ibb.co/cxcTLrT/screenshot1.png",
+            "SITE_LINK": "https://martinnegro-weatherapp.netlify.app"
+        },{
+            "SITE_NAME": "Psitesis",
+            "SITE_DESCRIPTION": "Blog y foro para estudiantes de psicología. Hecho con react, Redux y Material UI. API desarrollada con Express JS, Sequelize y Postgres. El sitio contiene un panel de administrador para acciones CRUD.\nConstruido en equipo durante el transcurso de 4 semanas",
+            "SITE_IMAGE": "https://i.postimg.cc/Zqyn2HYn/screenshot.png",
+            "SITE_LINK": "https://psitesis.netlify.app"
+        },{
+            "SITE_NAME": "GamesHome",
+            "SITE_DESCRIPTION": "Proyecto Individual. Hecho con  React, Redux y SASS puro en el front. Uso de rawg.io API. Formulario para agregar juegos al catálogo, con consistencia en base de datos. Desarrollo de filtros, paginado y alertas.",
+            "SITE_IMAGE": "https://raw.githubusercontent.com/martinnegro/martinnegro/main/screenshots/Videogames.png",
+            "SITE_LINK": "https://gameshome-martinnegro.netlify.app/"
+        }
+    ]
 }
