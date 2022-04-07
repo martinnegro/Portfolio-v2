@@ -1,4 +1,17 @@
 .container {
     height: 80%;
     width: 80%;
+
+    box-shadow: 0 0 15px grey;
+
+}
+
+.img {
+    height: 75%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.info {
+    height: 25%;
 }

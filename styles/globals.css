@@ -40,9 +40,18 @@ section {
   box-sizing: border-box;
 }
 
+section:nth-child(odd) {
+  background-color: black;
+}
+
 h1 {
   font-family: 'Jost', sans-serif;
   font-size: 6rem;
   margin: 0;
 }
-
+.carousel-wrapper,
+.carousel,
+.carousel > .slider-wrapper,
+.carousel > .slider-wrapper > .slider {
+  height: 100%;
+}

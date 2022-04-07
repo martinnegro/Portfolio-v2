@@ -1,3 +1,4 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
 import '../styles/customized-bootstrap.css'
