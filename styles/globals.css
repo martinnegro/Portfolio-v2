@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
 :root {
   --nav-bar-width: min(12%,75px)
 }
@@ -27,7 +24,7 @@ body {
   align-items: center;
 } */
 main {
-  padding-left: var(--nav-bar-width);
+  /* padding-left: var(--nav-bar-width); */
 }
 
 section {
@@ -49,6 +46,19 @@ h1 {
   font-size: 6rem;
   margin: 0;
 }
+h2, h3 {
+  font-family: 'Jost', sans-serif;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
 .carousel-wrapper,
 .carousel,
 .carousel > .slider-wrapper,

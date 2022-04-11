@@ -16,7 +16,7 @@ const CustomToggle = ({ children, eventKey, setActiveKey }: CustomToggleProps) =
             type="button"
             // onClick={handleToggle}
             className={styles.button}
-            style={{width: '100%'}}
+            
         >
                 {children}
         </button>

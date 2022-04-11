@@ -20,7 +20,7 @@ const CustomAccordionItem = ({ sectionName, setActiveKey, IconComponent }: Custo
             </Card.Header>
         </Link>                
         <Accordion.Collapse eventKey={sectionName} bsPrefix='customized-accordion-collapse'>
-            <Card.Body bsPrefix='customized-card-body'>{sectionName.toUpperCase()}</Card.Body>
+            <Card.Body as='h3' bsPrefix='customized-card-body'>{sectionName.toUpperCase()}</Card.Body>
         </Accordion.Collapse>
     </Card>
   )

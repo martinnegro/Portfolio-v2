@@ -13,9 +13,9 @@ interface CarouselItemProps {
 const CarouselCard = (props: CarouselItemProps) => {
   const { siteData, ...restProps } = props;
   return (
-    <div {...restProps} style={{ height: '100%' }}>
+    <div className={styles.cardContainer}>
         <img className={styles.img} src={siteData.SITE_IMAGE}/>
-        <div className={styles.info}>
+        <div className={styles.cardInfo}>
           <h3>{siteData.SITE_NAME}</h3>
           <p>{siteData.SITE_DESCRIPTION}</p>
         </div>

@@ -22,8 +22,8 @@ const Index: NextPage = () => {
 
       <Layout >
         <Home />
-        <Portfolio />
         <Resume />
+        <Portfolio />
         <Contact />
       </Layout>
     </div>

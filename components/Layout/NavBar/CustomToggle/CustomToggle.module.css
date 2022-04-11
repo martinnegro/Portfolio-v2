@@ -1,4 +1,10 @@
 .button {
     border: none;
     background-color: transparent;
+    color: white
+}
+@media (max-width: 600px) {
+    .button {
+        transform: rotate(-90deg);
+    }
 }

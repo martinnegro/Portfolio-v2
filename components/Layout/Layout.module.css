@@ -1,13 +1,19 @@
 .navbar {
-    position: fixed;
-    z-index: 0;
+    width: 12%;
     height: 100vh;
-    width: var(--nav-bar-width);
-
-    background-color: rgb(72, 72, 72);
+    position: fixed;
+    mix-blend-mode: difference;
 
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: 10%;
+        width: 100vw;
+    }
 }
 
 

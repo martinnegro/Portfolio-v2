@@ -33,3 +33,11 @@
     height: 2rem;
     width: 150px;
 }
+
+@media (max-width: 600px) {
+    .container {
+        top: unset;
+        bottom: 2%;
+        
+    }
+}

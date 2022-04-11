@@ -18,5 +18,23 @@
             "SITE_IMAGE": "https://raw.githubusercontent.com/martinnegro/martinnegro/main/screenshots/Videogames.png",
             "SITE_LINK": "https://gameshome-martinnegro.netlify.app/"
         }
-    ]
+    ],
+    "RESUME": {
+        "RESUME_TITLE": "Qué puedo hacer",
+        "RESUME_PARAGRAPHS": [
+            {   
+                "id": 1,
+                "text": "Soy programador en crecimiento, hoy dedicado al desarrollo web. Comencé practicando conceptos en Python para luego definirme por JavaScript, CSS y HTML. Hoy en día puedo desarrollar productos front-end con ReactJS y NextJS: maquetado HTML, consumo de APIs, interactividad con JS, animaciones. "
+            },{
+                "id": 2,
+                "text": "En mis proyectos personales he desarrollado los back-end necesarios para el funcionamiento de las aplicaciones. Programando en NodeJS y utilizando Express he creado endpoints y diseñado Bases de Datos con Sequelize, mayormente para Postgres."
+            },{
+                "id": 3,
+                "text": "En el último tiempo estuve incorporando TypeScript, tanto para front como para back. Siempre aplico conceptos SOLID, DRY y Atomic Design, de manera que mi código sea entendible y mantenible."
+            },{
+                "id": 4,
+                "text": "Si crees que puedo trabajar contigo, siéntete libre de contactarme."
+            }
+        ]
+    }
 }

@@ -6,12 +6,20 @@
 
 }
 
+.cardContainer {
+    height: 100%;
+}
 .img {
+    z-index: 1;
     height: 75%;
     object-fit: cover;
     object-position: 50% 50%;
 }
-
-.info {
+.cardInfo {
     height: 25%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
