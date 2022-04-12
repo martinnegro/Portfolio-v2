@@ -8,7 +8,7 @@ const Tools = () => {
   return (
     <div className={styles.tools}>
       {
-        Logos.map((Logo) => <Logo className={styles.svgLogo}/>)
+        Logos.map((Logo,i) => <Logo key={i} className={styles.svgLogo}/>)
       }
     </div>
   )

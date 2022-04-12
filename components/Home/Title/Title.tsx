@@ -28,7 +28,6 @@ const Title = () => {
           <span>í</span>
           <span>n</span>
       </h1> 
-    
       <h1 className={styles.subtitle}>
           <span className={`${styles.wLetter} ${styles.capitalLetter}`}>M</span>
           <span>e</span>
