@@ -42,17 +42,37 @@
 }
 
 @media (max-width: 600px) {
-  .customized-accordion {
+  .customized-accordion { 
     flex-direction: row;
+    width: 100%;
+    margin: 0;
+    gap: 0
   }
   
   .customized-card {
-    transform: rotate(90deg);
-  }
+    transform: rotate(-90deg);
+    height: unset;
+    width: unset;
+    flex-direction: column;
 
+}
+  .customized-card-header {
+    height: 50px;
+    width: unset;
+  }
+  .customized-accordion-collapse {
+    height:unset;
+    width: 100%;
+  }
   .customized-card-body {
-    height: 30%;
+    height: 150px;
+    width: unset;
     font-size: 1.5rem;
+
+    writing-mode: unset;
+    transform: rotate(90deg);
+
+    flex-direction: row;
   }
 }
 
