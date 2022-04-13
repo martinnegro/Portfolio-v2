@@ -1,8 +1,7 @@
 import React, { createRef, useContext, useRef } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import { LangContext, LangContextValues } from '../../../contexts/LangContext/LangContext'
-import CarouselCard from './CarouselCard'
-import CarouselItem from './CarouselItem'   
+import CarouselCard from './CarouselCard'  
 import styles from './PortfolioCarousel.module.css'
 
 
