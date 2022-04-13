@@ -16,7 +16,9 @@ const CustomAccordionItem = ({ sectionName, setActiveKey, IconComponent }: Custo
       <Card bsPrefix='customized-card'>
         <Link href={'#' + sectionName}>                
             <Card.Header bsPrefix='customized-card-header'>
-                <CustomToggle eventKey={sectionName} setActiveKey={setActiveKey} children={<IconComponent />} />  
+                <CustomToggle eventKey={sectionName} setActiveKey={setActiveKey}>
+                    <IconComponent />
+                </CustomToggle>
             </Card.Header>
         </Link>                
         <Accordion.Collapse eventKey={sectionName} bsPrefix='customized-accordion-collapse'>
