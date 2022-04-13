@@ -31,9 +31,9 @@ section {
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   box-sizing: border-box;
 }
 
@@ -64,4 +64,10 @@ p {
 .carousel > .slider-wrapper,
 .carousel > .slider-wrapper > .slider {
   height: 100%;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
 }

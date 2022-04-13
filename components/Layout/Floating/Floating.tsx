@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './Floating.module.css';
-import GithubLogo from './GithubLogo';
+import GithubLogo from '../../../public/GithubLogo.svg';
 import LanguageButton from './LanguageButton';
-import { LinkedInLogo } from './LinkedInLogo';
+import LinkedInLogo from '../../../public/LinkedInLogo.svg';
 
 
 const Floating = () => {
@@ -10,16 +10,16 @@ const Floating = () => {
         <div className={styles.container}>
             <div className={styles.link}>
                 <a href='https://github.com/martinnegro' target='_blank'>
-                    <GithubLogo style={styles.filling}/>
+                    <GithubLogo className={styles.filling}/>
                 </a>
             </div>
             <div className={styles.link}>
                 <a href='https://www.linkedin.com/in/martinnegro/' target='_blank'>
-                    <LinkedInLogo style={styles.filling}/>
+                    <LinkedInLogo className={styles.filling}/>
                 </a>    
             </div>
             <div className={styles.buttonContainer}>
-                <LanguageButton style={styles.button} />
+                <LanguageButton/>
             </div>
         </div>
   )

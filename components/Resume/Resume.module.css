@@ -16,15 +16,18 @@
 
 .svgLogo {
     height: 4rem;
+    
     fill: white;
     
 }
 @media (max-width: 600px)  {
     .tools {
+        width: 95%;
         height: 10%;
-        justify-content: center;
+    
         gap: 2px;
         flex-wrap: nowrap;
+        padding: 0;
     }
     .svgLogo {
         height: 2rem;
@@ -32,8 +35,8 @@
 }
 
 .skills {
-    width: 80%;
-    height: 60%;
+    width: min(700px,95%);
+    
     color: white;
 
     display: flex;

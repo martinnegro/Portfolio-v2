@@ -17,6 +17,8 @@ const subtitleInit = {
 }
 
 const Title = () => {
+
+
   
   return (
     <>
@@ -32,6 +34,7 @@ const Title = () => {
           <span className={`${styles.wLetter} ${styles.capitalLetter}`}>M</span>
           <span>e</span>
           <span>b&nbsp;</span>
+          <br className={styles.responsiveBreakLine}></br>
           <span>D</span>
           <span>e</span>
           <span>v</span>

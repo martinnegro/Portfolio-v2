@@ -1,20 +1,18 @@
 import React, { useContext } from 'react'
 import { LangContext, LangContextValues } from '../../../contexts/LangContext/LangContext'
 
-interface LanguageButtonProps {
-    style: string
-}
+import Button from 'react-bootstrap/Button'
 
-const LanguageButton = ({ style }: LanguageButtonProps) => {
+const LanguageButton = () => {
   const { text, changeLang } = useContext(LangContext) as LangContextValues;
 
   return (
-    <button 
-      className={style}
+    <Button
+      variant='outline-light'
       onClick={() => changeLang()}
     >
         { text?.LANG_BUTTON }
-    </button>
+    </Button>
   )
 }
 

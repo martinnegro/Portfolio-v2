@@ -13,3 +13,9 @@
     --w-duration: 1.5s;
 }
 
+@media (max-width: 600px) {
+    .sectionHome {
+        padding-left: 5%;
+    }
+
+}
