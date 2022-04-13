@@ -36,5 +36,13 @@
                 "text": "If you think that I can be useful working with you, feel free to contact me."
             }
         ]
+    },
+    "CONTACT": {
+        "NAME_INPUT_PLACEHOLDER": "Name",
+        "EMAIL_INPUT_PLACEHOLDER": "Email",
+        "TEXT_INPUT_PLACEHOLDER": "Text",
+        "ERROR_MESSAGE": "Message sent, thank you!",
+        "SUCCESS_MESSAGE": "The message was not sent. :(",
+        "SEND_BUTTON": "Send"
     }
 }

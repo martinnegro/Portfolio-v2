@@ -36,5 +36,13 @@
                 "text": "Si crees que puedo trabajar contigo, siéntete libre de contactarme."
             }
         ]
+    },
+    "CONTACT": {
+        "NAME_INPUT_PLACEHOLDER": "Nombre",
+        "EMAIL_INPUT_PLACEHOLDER": "Email",
+        "TEXT_INPUT_PLACEHOLDER": "Texto",
+        "ERROR_MESSAGE": "Mensaje enviado, gracias!",
+        "SUCCESS_MESSAGE": "El mensaje no ha sido enviado :(",
+        "SEND_BUTTON": "Enviar"
     }
 }

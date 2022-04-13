@@ -18,10 +18,12 @@ const CarouselCard = (props: CarouselItemProps) => {
         <div className={styles.img}>
           <Image src={siteData.SITE_IMAGE} layout="fill" objectFit='cover'/>
         </div>
-        <div className={styles.cardInfo}>
-          <h3>{siteData.SITE_NAME}</h3>
-          <p>{siteData.SITE_DESCRIPTION}</p>
-        </div>
+          <a href={siteData.SITE_LINK} className={styles.a}>
+            <div className={styles.cardInfo}>
+              <h3>{siteData.SITE_NAME}</h3>
+              <p>{siteData.SITE_DESCRIPTION}</p>
+            </div>
+          </a>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Spinner from 'react-bootstrap/Spinner'
@@ -7,6 +7,7 @@ import emailJs from 'emailjs-com';
 
 import styles from '../Contact.module.css'
 import { Alert } from 'react-bootstrap';
+import { LangContext, LangContextValues } from '../../../contexts/LangContext/LangContext';
 
 interface FormBody {
   name: string,
@@ -27,6 +28,8 @@ const ContactForm = () => {
   const [ isError, setIsError ] = useState(false);
   const [ message, setMessage ] = useState('')
 
+  const { text } = useContext(LangContext) as LangContextValues
+
   const handleOnChange = (e: any) => {
     setBody((state) => {
       return {
@@ -43,7 +46,7 @@ const ContactForm = () => {
         setIsError(false);
         emailJs.sendForm('service_4szwygq', 'template_vqc2w2g', e.currentTarget, 'user_ScvJzliGwo3gxrNCMegZO')
             .then(()=>{
-                setMessage('Message sent, thank you!');
+                setMessage(text?.CONTACT.SUCCESS_MESSAGE!);
                 setIsError(false)
                 setWasSent(true);
                 setTimeout(()=>{ 
@@ -54,7 +57,7 @@ const ContactForm = () => {
             }).catch(()=>{
               setIsError(true)
               setWasSent(true);
-              setMessage('The message was not sent.');
+              setMessage(text?.CONTACT.ERROR_MESSAGE!);
               setTimeout(()=>{ 
                   setIsSending(false); 
                   setWasSent(false);
@@ -70,10 +73,10 @@ const ContactForm = () => {
         !isSending ?
         
         <Form className= {styles.formContainer} onSubmit={sendEmail} onChange={(e) => handleOnChange(e)}>
-            <Form.Control className="mb-3" type="text" placeholder='Nombre' name="name" value={body.name}/>
-            <Form.Control className="mb-3" type="email" placeholder='Email' name="email" value={body.email}/>
-            <Form.Control className="mb-3" as="textarea" type="text" placeholder='Texto' name="text" value={body.text}/>
-            <Button variant="outline-dark" className={styles.formButton} type="submit"> Enviar </Button>
+            <Form.Control className="mb-3" type="text" placeholder={text?.CONTACT.NAME_INPUT_PLACEHOLDER} name="name" value={body.name}/>
+            <Form.Control className="mb-3" type="email" placeholder={text?.CONTACT.EMAIL_INPUT_PLACEHOLDER} name="email" value={body.email}/>
+            <Form.Control className="mb-3" as="textarea" type="text" placeholder={text?.CONTACT.TEXT_INPUT_PLACEHOLDER} name="text" value={body.text}/>
+            <Button variant="outline-dark" className={styles.formButton} type="submit">{ text?.CONTACT.SEND_BUTTON }</Button>
         </Form>
 
         : isSending && !wasSent ?

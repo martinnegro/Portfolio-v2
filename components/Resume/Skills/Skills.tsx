@@ -9,7 +9,7 @@ const Skills = () => {
       <h2>
         { text?.RESUME.RESUME_TITLE }
       </h2>
-        { text?.RESUME.RESUME_PARAGRAPHS.map((text) => <p key={text.id}> { text.text } </p>) }
+        { text?.RESUME.RESUME_PARAGRAPHS.map((text) => <p key={text.id} className={styles.p}> { text.text } </p>) }
     </div>
   )
 }

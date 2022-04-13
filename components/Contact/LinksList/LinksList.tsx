@@ -8,22 +8,22 @@ const LinksList = () => {
   return (
     <ul className={styles.ul}>
         <li>
-            <GithubLogo className={styles.svg}/>
-            <span>
+            <p>
+                <GithubLogo className={styles.svg}/>
                 /martinnegro
-            </span>
+            </p>
         </li>
         <li>
-            <LinkedInLogo className={styles.svg}/>
-            <span>
+            <p>
+                <LinkedInLogo className={styles.svg}/>
                 /in/martinnegro
-            </span>
+            </p>        
         </li>
         <li>
-            <GmailLogo className={styles.svg}/>
-            <span>
+            <p>
+                <GmailLogo className={styles.svg}/> 
                 mnegro91@gmail.com
-            </span>
+            </p>
         </li>
     </ul>
   )
