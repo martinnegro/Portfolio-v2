@@ -11,7 +11,7 @@ const Index: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Martin's Portfolio</title>
+        <title>Martin &lsquo;s Portfolio</title>
         <meta name="Martin's Portfolio"/>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>

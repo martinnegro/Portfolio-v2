@@ -9,12 +9,12 @@ const Floating = () => {
     return (
         <div className={styles.container}>
             <div className={styles.link}>
-                <a href='https://github.com/martinnegro' target='_blank'>
+                <a href='https://github.com/martinnegro' target='_blank' rel="noreferrer">
                     <GithubLogo className={styles.filling}/>
                 </a>
             </div>
             <div className={styles.link}>
-                <a href='https://www.linkedin.com/in/martinnegro/' target='_blank'>
+                <a href='https://www.linkedin.com/in/martinnegro/' target='_blank' rel="noreferrer">
                     <LinkedInLogo className={styles.filling}/>
                 </a>    
             </div>
