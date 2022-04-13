@@ -27,8 +27,8 @@ const ContactForm = () => {
   const [ isError, setIsError ] = useState(false);
   const [ message, setMessage ] = useState('')
 
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setBody(state => {
+  const handleOnChange = (e: any) => {
+    setBody((state) => {
       return {
         ...state,
         [e.target.name]: e.target.value
@@ -36,12 +36,12 @@ const ContactForm = () => {
     });
   }
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
         setIsSending(true);
         setWasSent(false);
         setIsError(false);
-        emailJs.sendForm('service_4szwygq', 'template_vqc2w2g', e.target, 'user_ScvJzliGwo3gxrNCMegZO')
+        emailJs.sendForm('service_4szwygq', 'template_vqc2w2g', e.currentTarget, 'user_ScvJzliGwo3gxrNCMegZO')
             .then(()=>{
                 setMessage('Message sent, thank you!');
                 setIsError(false)
@@ -69,7 +69,7 @@ const ContactForm = () => {
       {
         !isSending ?
         
-        <Form className= {styles.formContainer} onSubmit={sendEmail} onChange={(e) => handleOnChange}>
+        <Form className= {styles.formContainer} onSubmit={sendEmail} onChange={(e) => handleOnChange(e)}>
             <Form.Control className="mb-3" type="text" placeholder='Nombre' name="name" value={body.name}/>
             <Form.Control className="mb-3" type="email" placeholder='Email' name="email" value={body.email}/>
             <Form.Control className="mb-3" as="textarea" type="text" placeholder='Texto' name="text" value={body.text}/>
