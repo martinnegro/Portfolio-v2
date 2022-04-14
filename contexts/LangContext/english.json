@@ -41,8 +41,8 @@
         "NAME_INPUT_PLACEHOLDER": "Name",
         "EMAIL_INPUT_PLACEHOLDER": "Email",
         "TEXT_INPUT_PLACEHOLDER": "Text",
-        "ERROR_MESSAGE": "Message sent, thank you!",
-        "SUCCESS_MESSAGE": "The message was not sent. :(",
+        "ERROR_MESSAGE": "The message was not sent. :(",
+        "SUCCESS_MESSAGE": "Message sent, thank you!",
         "SEND_BUTTON": "Send"
     }
 }

@@ -22,7 +22,7 @@ const initState = {
 }
 
 const ContactForm = () => {
-  const [ body, setBody ] = useState<FormBody>(initState);
+  const [ body, setBody ] = useState(initState);
   const [ isSending, setIsSending ] = useState(false);
   const [ wasSent, setWasSent ] = useState(false);
   const [ isError, setIsError ] = useState(false);
@@ -44,26 +44,26 @@ const ContactForm = () => {
         setIsSending(true);
         setWasSent(false);
         setIsError(false);
-        emailJs.sendForm('service_4szwygq', 'template_vqc2w2g', e.currentTarget, 'user_ScvJzliGwo3gxrNCMegZO')
-            .then(()=>{
-                setMessage(text?.CONTACT.SUCCESS_MESSAGE!);
-                setIsError(false)
-                setWasSent(true);
-                setTimeout(()=>{ 
-                  setIsSending(false);
-                  setWasSent(false);
-                  setIsError(false);
-                },5000)
-            }).catch(()=>{
+        emailJs.send('service_4szwygq', 'template_vqc2w2g', body, 'user_ScvJzliGwo3gxrNCMegZO')
+          .then(() => {
+            setMessage(text?.CONTACT.SUCCESS_MESSAGE!);
+            setIsError(false)
+            setWasSent(true);
+            setTimeout(()=>{ 
+              setIsSending(false);
+              setWasSent(false);
+              setIsError(false);
+            },5000)
+          },() => {
+            setIsError(true);
+            setWasSent(true);
+            setMessage(text?.CONTACT.ERROR_MESSAGE!);
+            setTimeout(() => { 
+              setIsSending(false); 
+              setWasSent(false);
               setIsError(true)
-              setWasSent(true);
-              setMessage(text?.CONTACT.ERROR_MESSAGE!);
-              setTimeout(()=>{ 
-                  setIsSending(false); 
-                  setWasSent(false);
-                  setIsError(true)
-                },5000)
-            })
+            },5000)
+          })
         setBody(initState);
   }
 
