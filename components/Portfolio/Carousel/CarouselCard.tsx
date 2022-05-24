@@ -10,6 +10,7 @@ interface CarouselItemProps {
       SITE_DESCRIPTION: string,
       SITE_IMAGE: string,
       SITE_LINK: string,
+      SITE_GITHUB: string
     },
   }
 
