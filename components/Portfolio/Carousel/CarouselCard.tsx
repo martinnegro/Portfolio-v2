@@ -36,7 +36,8 @@ const CarouselCard = (props: CarouselItemProps) => {
                 <a 
                   href={siteData.SITE_LINK} 
                   className={styles.a}
-                  target="_blank"
+                  target="_blank" 
+                  rel="noreferrer"                 
                 > 
                     <BiLinkExternal style={{ fontSize: '1.5rem' }}/>
                  </a> 
