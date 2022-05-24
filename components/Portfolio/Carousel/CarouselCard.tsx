@@ -27,6 +27,7 @@ const CarouselCard = (props: CarouselItemProps) => {
                   href={siteData.SITE_LINK} 
                   className={styles.a}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <h3>
                       {siteData.SITE_NAME}
@@ -43,6 +44,7 @@ const CarouselCard = (props: CarouselItemProps) => {
                  href={siteData.SITE_GITHUB} 
                  className={styles.a}
                  target="_blank"
+                 rel="noreferrer"
                  >
                 <GitHubLogo style={{ height: '1.5rem' }}/>
                 </a>
