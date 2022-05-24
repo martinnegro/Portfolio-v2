@@ -25,6 +25,12 @@
 
     padding: 0 2px
 }
+.headerInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
 .a {
     text-decoration: none;
     color: inherit;
