@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 :root {
   --nav-bar-width: min(12%,75px)
 }
@@ -42,12 +43,12 @@ section:nth-child(odd) {
 }
 
 h1 {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-size: 6rem!important;
   margin: 0;
 }
 h2, h3 {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Questrial', sans-serif;
 }
 
 h3 {
