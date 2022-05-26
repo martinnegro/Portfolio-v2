@@ -1,20 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { ScrollPositionContext } from '../../../contexts/ScrollPositionContext'
-import styles from './Title.module.css'
-
-const initialState = {
-  height: '100%',
-  padding: '20% 0 0 15%',
-}
-
-const titleInit = {
-  left: '0',
-  fontSize: '6rem'
-}
-const subtitleInit = {
-  left: '0',
-  fontSize: '6rem'
-}
+import React from 'react'
+import { Titleh1 } from '../../styled/index.scss'
 
 const Title = () => {
 
@@ -22,29 +7,12 @@ const Title = () => {
   
   return (
     <>
-      <h1 className={styles.titleName}>
-          <span className={styles.capitalLetter}>M</span>
-          <span>a</span>
-          <span>r</span>
-          <span>t</span>
-          <span>í</span>
-          <span>n</span>
-      </h1> 
-      <h1 className={styles.subtitle}>
-          <span className={`${styles.wLetter} ${styles.capitalLetter}`}>M</span>
-          <span>e</span>
-          <span>b&nbsp;</span>
-          <br className={styles.responsiveBreakLine}></br>
-          <span>D</span>
-          <span>e</span>
-          <span>v</span>
-          <span>e</span>
-          <span>l</span>
-          <span>o</span>
-          <span>p</span>
-          <span>e</span>
-          <span>r</span>  
-      </h1>
+      <Titleh1>
+        <span>m</span><span>a</span><span>r</span><span>t</span><span>i</span><span>n</span>
+      </Titleh1> 
+      <Titleh1>
+        <span>w</span><span>e</span><span>b</span><span>d</span><span>e</span><span>v</span>
+      </Titleh1>
     </>
   )
 }

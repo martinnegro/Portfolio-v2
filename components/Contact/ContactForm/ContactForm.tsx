@@ -73,9 +73,9 @@ const ContactForm = () => {
         !isSending ?
         
         <Form className= {styles.formContainer} onSubmit={sendEmail} onChange={(e) => handleOnChange(e)}>
-            <Form.Control className="mb-3" type="text" placeholder={text?.CONTACT.NAME_INPUT_PLACEHOLDER} name="name" value={body.name}/>
-            <Form.Control className="mb-3" type="email" placeholder={text?.CONTACT.EMAIL_INPUT_PLACEHOLDER} name="email" value={body.email}/>
-            <Form.Control className="mb-3" as="textarea" type="text" placeholder={text?.CONTACT.TEXT_INPUT_PLACEHOLDER} name="text" value={body.text}/>
+            <Form.Control className="mb-3" type="text" placeholder={text?.CONTACT.NAME_INPUT_PLACEHOLDER} name="name" />
+            <Form.Control className="mb-3" type="email" placeholder={text?.CONTACT.EMAIL_INPUT_PLACEHOLDER} name="email" />
+            <Form.Control className="mb-3" as="textarea" type="text" placeholder={text?.CONTACT.TEXT_INPUT_PLACEHOLDER} name="text" />
             <Button variant="outline-dark" className={styles.formButton} type="submit">{ text?.CONTACT.SEND_BUTTON }</Button>
         </Form>
 
