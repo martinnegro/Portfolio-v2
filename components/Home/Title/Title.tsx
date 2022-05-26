@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { ScrollPositionContext } from '../../../contexts/ScrollPositionContext'
+import React from 'react'
 import { Titleh1 } from '../../styled/index.scss'
 
 const Title = () => {

@@ -42,11 +42,11 @@ section:nth-child(odd) {
   background-color: black;
 }
 
-h1 {
+/* h1 {
   font-family: 'Questrial', sans-serif;
   font-size: 6rem!important;
   margin: 0;
-}
+} */
 h2, h3 {
   font-family: 'Questrial', sans-serif;
 }
@@ -65,12 +65,5 @@ p {
 .carousel > .slider-wrapper,
 .carousel > .slider-wrapper > .slider {
   height: 100%;
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 4rem!important ;
-  }
-  
 }
 
