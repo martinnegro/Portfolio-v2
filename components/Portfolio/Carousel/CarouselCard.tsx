@@ -24,15 +24,18 @@ const CarouselCard = (props: CarouselItemProps) => {
         </div>
         <div className={styles.cardInfo}>
           <div className={styles.headerInfo}>
-            <AnchorTag href={siteData.SITE_LINK}>
+            <AnchorTag href={siteData.SITE_LINK} >
               <h3 style={{ margin: '0' }}>
                   {siteData.SITE_NAME}
               </h3>
-              <BiLinkExternal style={{ fontSize: '1.5rem', display:'flex',alignContent:'center' }}/>
+              <BiLinkExternal style={{ fontSize: '1.5rem', display:'flex',verticalAlign:'center' }}/>
             </AnchorTag>
-            <AnchorTag href={siteData.SITE_GITHUB} >
-              <GitHubLogo style={{ height: '1.3rem', marginBottom: '2px' }}/>
-            </AnchorTag>
+            {
+              siteData.SITE_GITHUB &&
+              <AnchorTag href={siteData.SITE_GITHUB} >
+                <GitHubLogo style={{ height: '1.3rem', marginBottom: '2px' }}/>
+              </AnchorTag>
+            }
           </div>
           <p>{siteData.SITE_DESCRIPTION}</p>
         </div>

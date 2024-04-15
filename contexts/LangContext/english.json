@@ -3,29 +3,11 @@
     "LANG_BUTTON": "Cambiar a Español",
     "PORTFOLIO_SITES": [
         {
-            "SITE_NAME": "TEG Junior",
-            "SITE_DESCRIPTION": "Work in progress. TEG is an argentinian board game, based on the famous Risk. This web app is a TEG Junior (for now) limited version, that allows play with other users in a turn based system. The front is developed in NextJS and server in NodeJS, using TypeScript in both.",
-            "SITE_IMAGE": "https://imgur.com/nrUqnX8.png",
-            "SITE_LINK": "https://webteg.vercel.app",
+            "SITE_NAME": "Bondis Map",
+            "SITE_DESCRIPTION": "",
+            "SITE_IMAGE": "/bondis-map.png",
+            "SITE_LINK": "https://bondis.martindev.ar",
             "SITE_GITHUB": ""
-        },{
-            "SITE_NAME": "Psitesis",
-            "SITE_DESCRIPTION": "Blog and Forum for psychology students. Made with React, Redux and Material UI. API develop with Express JS, Sequelize and Postgres. The site has an admin panel for CRUD actions.\nDeveloped as a team over the course of 4 weeks. ",
-            "SITE_IMAGE": "https://i.postimg.cc/Zqyn2HYn/screenshot.png",
-            "SITE_LINK": "https://psitesis.netlify.app",
-            "SITE_GITHUB": "https://github.com/martinnegro/Psitesis"
-        },{
-            "SITE_NAME": "GamesHome",
-            "SITE_DESCRIPTION": "Individual Project. Made with React, Redux and pure SASS for the front. Use of rawg.io API. Has a backend with database for the creation of new games. Filter, pagination, forms and alerts development.",
-            "SITE_IMAGE": "https://raw.githubusercontent.com/martinnegro/martinnegro/main/screenshots/Videogames.png",
-            "SITE_LINK": "https://gameshome-martinnegro.netlify.app/",
-            "SITE_GITHUB": ""
-        },{
-            "SITE_NAME": "WeatherApp",
-            "SITE_DESCRIPTION": "One of my first projects as a Full Stack Dev student. Made with React. Use of OpenWeatherMap and OpenStreetMap APIs.",
-            "SITE_IMAGE": "https://i.ibb.co/cxcTLrT/screenshot1.png",
-            "SITE_LINK": "https://martinnegro-weatherapp.netlify.app",
-            "SITE_GITHUB": "https://github.com/martinnegro/WeatherApp"
         }
     ],
     "RESUME": {
