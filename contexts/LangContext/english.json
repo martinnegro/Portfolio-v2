@@ -4,7 +4,7 @@
     "PORTFOLIO_SITES": [
         {
             "SITE_NAME": "Bondis Map",
-            "SITE_DESCRIPTION": "",
+            "SITE_DESCRIPTION": "Web App that shows the location of buses in the Metropolitan Area of Buenos Aires. It allows you to select one line at a time, allowing you to see the round trip routes and the real location of the buses that correspond to that line. It obtains the information of the API of the City of Buenos Aires through a small server that is responsible for delivering the data. Front developed in NextJS and back in ExpressJS",
             "SITE_IMAGE": "/bondis-map.png",
             "SITE_LINK": "https://bondis.martindev.ar",
             "SITE_GITHUB": ""
