@@ -42,42 +42,40 @@ export async function onClickCellHandler(
 ) {
     if (!grid) return;
     const cellElement = event.target as HTMLDivElement
+    // If cell is explored was already clicked and showing its information
     if (cellElement.classList.contains('explored')) return
+    // Just to avoid others elements to be clicked
     if (cellElement.nodeName !== 'DIV') return
-    const [ row, col ] = cellElement.id.split('-')
-    const x = parseInt(row)
-    const y = parseInt(col)
+    // Get cell coordinates
+    const { x, y } = getCoordinatesByCellId(cellElement.id)
+
+    // If cell is a mine game finishes
     if (grid[x][y] === 10) {
         cellElement.className = cellElement.className + ' exploded-mine'
         setGameOver(true)
     } else {
+        // If cell is not a mine explore cell, getting all cells if first cell is 0 (no near mines)
         const exploredCells = exploreCell(grid, x, y)
         for (const key in exploredCells) {
             const cellElement = document.getElementById(key)!
             if (cellElement.classList.contains('explored')) continue
+
+            // Track how many cells were explored to know is game is won (all explored cells are not mines)
             if (exploredCount.current === 0) setGameStarted(true)
             exploredCount.current += 1
-    
-            if (exploredCount.current === (gridSize[0] * gridSize[1] - mines)) setWin(true)
-            cellElement.className = cellElement.className + ' explored'
-            const [row, col] = key.split('-')
-            const x = parseInt(row)
-            const y = parseInt(col)
+            if (exploredCount.current === (gridSize[0] * gridSize[1] - mines)) setWin(true) 
+                
+            cellElement.classList.add('explored')
+            const { x, y } = getCoordinatesByCellId(key)
             const nearMines = grid[x][y]
-            if (nearMines === 0) continue  
-            const textElement = document.createElement('p')
-            textElement.style.color = 
-                nearMines === 1 ? '#0000E5' :
-                nearMines === 2 ? '#007300' :
-                nearMines === 3 ? '#E50000' :
-                nearMines === 4 ? '#000073' :
-                nearMines === 5 ? '#730000' :
-                nearMines === 6 ? '#00E500' :
-                nearMines === 7 ? '#E5E500' :
-                '#E5E5E5'
 
-            textElement.className = 'grid-count-text'
-            //@ts-ignore
+            // If cell is 0 just set explored class
+            if (nearMines === 0) continue  
+
+            // Add number to cell
+            const textElement = document.createElement('p')
+            textElement.classList.add('grid-count-text')
+            textElement.style.color = setColorByNumber(nearMines)
             textElement.textContent = nearMines.toString()
             cellElement.appendChild(textElement)
         }
@@ -128,4 +126,20 @@ function exploreCell(grid: number[][], startX: number, startY: number): {[key: s
     }
 
     return exploredCells
+}
+
+function setColorByNumber(n: number) {
+    return n === 1 ? '#0000E5' :
+        n === 2 ? '#007300' :
+        n === 3 ? '#E50000' :
+        n === 4 ? '#000073' :
+        n === 5 ? '#730000' :
+        n === 6 ? '#00E500' :
+        n === 7 ? '#E5E500' :
+        '#E5E5E5'
+}
+
+function getCoordinatesByCellId(id: string) {
+    const [row, col] = id.split('-')
+    return { x: parseInt(row), y: parseInt(col) }
 }

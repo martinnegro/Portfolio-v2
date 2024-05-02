@@ -84,7 +84,7 @@
 }
 
 #face {
-    height: max-content;
+    height: 100%;
     aspect-ratio: 1/1;
     
     display: flex;
