@@ -139,6 +139,8 @@
     font-size: 0.8em;
 
     line-height: 1em;
+
+    font-family: 'VT323', monospace;
 }
 
 .grid-cell {
