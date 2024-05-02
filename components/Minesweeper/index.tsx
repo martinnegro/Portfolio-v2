@@ -7,8 +7,8 @@ import Timer from "./Timer";
 
 const Minesweeper: React.FC = () => {
     const [ isSettingsOpen, setIsSettingsOpen ] = useState(true);
-    const [ face, setFace ] = useState<null | HTMLElement>(null);
-    const [ container, setContainer ] = useState<null | HTMLElement>(null);
+    const face = useRef<null | HTMLDivElement>(null);
+    const container = useRef<null | HTMLDivElement>(null);
     const [ gridSize, setGridSize ] = useState<[number,number]>([16,16]);
     const [ mines, setMines ] = useState<number>(40);
     const [ grid, setGrid ] = useState<null | number[][] >(null);
@@ -18,31 +18,26 @@ const Minesweeper: React.FC = () => {
     const exploredCount = useRef(0)
 
     useEffect(() => {
-        setContainer(document.getElementById('grid-container'))
-        setFace(document.getElementById('face'))
-    },[])
-
-    useEffect(() => {
         if (isSettingsOpen) return
         if (!gridSize || !mines) return
         restartGame()
     },[isSettingsOpen])
     
     useEffect(() => {
-        if (win && grid) {
+        if (win && grid && face.current && container.current) {
             setGameStarted(false)
-            face?.classList.add('winning-face')
-            container!.className = container!.className + ' game-over'
+            face.current.classList.add('winning-face')
+            container.current.classList.add('game-over')
             showAllMines(grid,'flag')
         }
     },[win])
 
     useEffect(() => {
-        if (!gameOver || !grid) return
+        if (!gameOver || !grid || !face.current || !container.current) return
         setGameStarted(false)
         showAllMines(grid,'mine')
-        face?.classList.add('loosing-face')
-        container!.className = container!.className + ' game-over'
+        face.current.classList.add('loosing-face')
+        container.current.classList.add('game-over')
     },[gameOver])
 
     async function showAllMines(grid: number[][],iconClassName = 'mine') {
@@ -59,13 +54,14 @@ const Minesweeper: React.FC = () => {
     }
 
     function restartGame() {
+        if (!face.current || !container.current) return
         setGameOver(false)
         setWin(false)
         setGameStarted(false)
         exploredCount.current = 0
-        face?.classList.remove('winning-face','loosing-face')
-        face?.classList.add('playing-face')
-        container!.className = ''
+        face.current.classList.remove('winning-face','loosing-face')
+        face.current.classList.add('playing-face')
+        container.current.classList.remove('game-over')
          // Remove classes from cells
         const cells = document.querySelectorAll('.grid-cell');
         cells.forEach(cell => {
@@ -82,10 +78,10 @@ const Minesweeper: React.FC = () => {
                 <div id="mines-count" className="lcd reverse-metal-borders">
                     {mines < 10 ? '0' + mines : mines}
                 </div>
-                <div id="face" className="metal-borders playing-face" onClick={() => restartGame()}></div>
+                <div id="face" className="metal-borders playing-face" ref={face} onClick={() => restartGame()}></div>
                 <Timer gameStarted={gameStarted}/>
             </div>
-        <div id="grid-container">
+        <div id="grid-container" ref={container}>
             {   
                 isSettingsOpen ? 
                 <SettingsForm
@@ -119,7 +115,7 @@ const Minesweeper: React.FC = () => {
                 style={{ marginTop: '0.5em'}}
                 onClick={() => {
                     setIsSettingsOpen(true)
-                    container!.className = ''
+                    container.current?.classList.remove('game-over')
                 }}
             >Settings</button>
         }

@@ -3,6 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@font-face {
+    font-family: 'Minisystem';
+    src: local('Minisystem'), url(../public/fonts/minisystem/Minisystem.otf) format('truetype');
+}
+
 :root {
   --nav-bar-width: min(12%,75px)
 }

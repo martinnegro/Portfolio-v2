@@ -1,10 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
-@font-face {
-    font-family: 'Minisystem';
-    src: local('Minisystem'), url(../../public/fonts/minisystem/Minisystem.otf) format('truetype');
-}
-
 * {
     --bg-color: rgb(157, 155, 155);
 }
