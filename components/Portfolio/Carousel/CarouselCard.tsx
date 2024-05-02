@@ -37,7 +37,7 @@ const CarouselCard = (props: CarouselItemProps) => {
               </AnchorTag>
             }
           </div>
-          <p>{siteData.SITE_DESCRIPTION}</p>
+          <p className={styles.siteDescription}>{siteData.SITE_DESCRIPTION}</p>
         </div>
     </div>
   )

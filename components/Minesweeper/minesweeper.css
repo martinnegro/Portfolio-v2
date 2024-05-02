@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@font-face {
+    font-family: 'Minisystem';
+    src: local('Minisystem'), url(../../public/fonts/minisystem/Minisystem.otf) format('truetype');
+}
+
+* {
+    --bg-color: rgb(157, 155, 155);
+}
+
+#minesweeper-container {
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+#minesweeper {
+    width: fit-content;
+
+    padding: 0.5em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-color);
+}
+
+#info-container {
+    width: 300px;
+    margin-bottom: 0.25em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#minesweeper-settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5em
+}
+
+#grid-size-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-container {
+    border-top: 0.125em solid rgb(126, 126, 126);
+    border-left: 0.125em solid rgb(126, 126, 126);
+    border-bottom: 0.125em solid  rgb(204, 204, 204);
+    border-right: 0.125em solid  rgb(204, 204, 204);
+}
+
+.metal-borders {
+    border-top: 0.125em solid rgb(204, 204, 204);
+    border-left: 0.125em solid rgb(204, 204, 204);
+    border-bottom: 0.125em solid rgb(126, 126, 126);
+    border-right: 0.125em solid rgb(126, 126, 126);
+}
+
+.reverse-metal-borders {
+    border-top: 0.125em solid rgb(126, 126, 126);
+    border-left: 0.125em solid rgb(126, 126, 126);
+    border-bottom: 0.125em solid  rgb(204, 204, 204);
+    border-right: 0.125em solid  rgb(204, 204, 204);
+}
+
+.lcd {
+    padding: 0;
+    margin: 0;
+
+    background-color: black;
+    color: red;
+    
+    font-family: 'Minisystem', monospace;
+    font-weight: 900;
+}
+
+#face {
+    height: max-content;
+    aspect-ratio: 1/1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-color);
+}
+
+.playing-face::after {
+    content: '🙂';
+}
+
+.loosing-face::after {
+    content: '😭';
+}
+
+.winning-face::after {
+    content: '😎';
+}
+
+.game-over {
+    pointer-events: none;
+}
+
+.grid-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    margin: 0;
+    padding: 0;
+}
+
+.grid-count-text {
+    height: 100%;
+    margin: 0;
+    padding: 0;    
+    font-weight: 600;
+    font-size: 0.8em;
+
+    line-height: 1em;
+}
+
+.grid-cell {
+    height: 1em;
+    width: 1em;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-color);
+}
+
+
+.mine::after{
+    content: '💣';
+    font-size: 0.5em;
+}
+
+.flag::after{
+    content: '🚩';
+    font-size: 0.5em;
+}
+
+.exploded-mine::after {
+    content: '💥';
+    
+}
+
+.explored {    
+    background-color: rgb(139, 139, 139);
+    border: 0.5px solid rgb(92, 92, 92);
+}
+
+.minesweeper-form {
+    font-family: 'VT323', monospace;
+}
+
+.minesweeper-button {
+    background-color: var(--bg-color)
+}
+
+.minesweeper-input {
+
+}
+
