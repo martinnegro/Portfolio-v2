@@ -81,7 +81,7 @@ const Minesweeper: React.FC = () => {
                 <div id="face" className="metal-borders playing-face" ref={face} onClick={() => restartGame()}></div>
                 <Timer gameStarted={gameStarted}/>
             </div>
-        <div id="grid-container" ref={container}>
+        <div id="grid-container" className="reverse-metal-borders" ref={container}>
             {   
                 isSettingsOpen ? 
                 <SettingsForm
