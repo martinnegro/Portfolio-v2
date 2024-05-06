@@ -15,16 +15,16 @@
         "RESUME_PARAGRAPHS": [
             {   
                 "id": 1,
-                "text": "I'm a growing programmer, dedicated to web development. I started practicing concepts in Python, and then I moved to JavaScript, CSS and HTML. Today I can develop front-end products with ReactJS and NextJS: HTML layout, API consume, iteractivity with JS, animations."
+                "text": "I work developing systems for web and mobile applications, contributing to projects from planning to continuous delivery."
             },{
                 "id": 2,
-                "text": "In my personal proyects I've developed the back-end for the site functioning. With NodeJS and using Express I've created endpoints and designed Data Bases with Sequelize, mostly for Postgres."
+                "text": "I have the versatility to work on frontend and backend with various tools such as HTML, CSS, JavaScript (React, Next, Nest), Python (Django), Flutter, although I am strongly specialized in TypeScript."
             },{
                 "id": 3,
-                "text": "I've been using TypeScript lately, for both front and back. I always use SOLID, DRY and Atomic Design concepts, in a way that my code be understable and maintainable."
+                "text": "In addition to writing code, I also work in DevOps intervening in continuous deliveries and deployments with Firebase and AWS."
             },{
                 "id": 4,
-                "text": "If you think that I can be useful working with you, feel free to contact me."
+                "text": "You can contact me using the form below or through my Linkedin."
             }
         ]
     },

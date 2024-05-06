@@ -2,8 +2,7 @@ export function createMinesweeper(
     setGrid: React.Dispatch<React.SetStateAction<number[][] | null>>, 
     gridSize: [number,number],
     mines: number
-) {
-    
+) {    
     const grid = createGrid(gridSize[0],gridSize[1],mines)
     if (!grid) return
     countNearMines(grid)
