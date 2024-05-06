@@ -12,6 +12,7 @@ const LinksList = () => {
             <a 
                 href='https://github.com/martinnegro'
                 target='_blank'
+                rel="noreferrer"
                 className={styles.contactLink}
             >
             <p>
@@ -24,6 +25,7 @@ const LinksList = () => {
         <a 
                 href='https://www.linkedin.com/in/martinnegro/'
                 target='_blank'
+                rel="noreferrer"
                 className={styles.contactLink}
             >
             <p>
