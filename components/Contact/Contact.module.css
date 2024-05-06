@@ -16,3 +16,8 @@
 .formButton {
     width: 100%;
 }
+
+.contactLink {
+    text-decoration: none;
+    color: inherit
+}

@@ -6,7 +6,6 @@ const Contact = () => {
   return (
     <section id='contact'>
       <LinksList />
-      <ContactForm />
     </section>
   )
 }
