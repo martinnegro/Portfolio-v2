@@ -76,7 +76,7 @@ const Minesweeper: React.FC = () => {
         <div id="minesweeper" className="metal-borders">
             <div id='info-container'>
                 <div id="mines-count" className="lcd reverse-metal-borders">
-                    {mines < 10 ? '0' + mines : mines}
+                    { isNaN(mines) ? '00' : mines < 10 ? '0' + mines : mines}
                 </div>
                 <div id="face" className="metal-borders playing-face" ref={face} onClick={() => restartGame()}></div>
                 <Timer gameStarted={gameStarted}/>
