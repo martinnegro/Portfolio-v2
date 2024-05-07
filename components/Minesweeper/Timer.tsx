@@ -7,6 +7,10 @@ interface TimerProps {
 function Timer({ gameStarted }: TimerProps) {
     const [ time, setTime ] = useState('000')
     const timer = useRef<undefined | NodeJS.Timer>()
+    
+    useEffect(() => {
+        if (time === '999' && timer.current) clearInterval(timer.current)
+    }, [time])
 
     useEffect(() => {
         if (gameStarted) {
@@ -22,11 +26,6 @@ function Timer({ gameStarted }: TimerProps) {
         }
     }, [gameStarted])
 
-    useEffect(() => {
-        return () => {
-            if (time === '999' && timer.current) clearInterval(timer.current)
-        }
-    }, [])
 
     return (
         <div id="timer" className="lcd reverse-metal-borders">
